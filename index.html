@@ -6,30 +6,43 @@
 -->
 <html>
 	<style>
-    .pubSlider {
-        width: 100%;
-        height: 150px;            /* ارتفاع اسلایدر */
-        border-radius: 6px;
-        overflow: hidden;
-        margin-bottom: 15px;
-    }
+.pubArticle {
+    display: flex;
+    flex-direction: column; /* ستون برای موبایل و متن زیر اسلایدر */
+    width: 100%;
+    margin-bottom: 30px;
+}
 
-    .pubSlider img {
-            width: 100%;
-        height: 100%;
-        object-fit: contain;        /* مثل نسخهٔ اصلی — تصویر را فیت و کراپ می‌کند */
-        display: block;
-    }
+.pubSlider {
+    width: 100%;    /* اسلایدر حالا کل عرض والد را می‌گیرد */
+    height: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
 
-    /* برای نمایش بهتر در موبایل */
-    @media (max-width: 768px) {
-        .pubSlider {
-            height: 180px;
-        }
-    }
-		.pubArticle .inner {
+.pubSlider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.pubArticle .inner {
     width: 100%;      /* متن هم کل عرض را می‌گیرد */
     box-sizing: border-box;
+}
+
+.pubArticle .inner p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+    .pubSlider {
+        height: 180px;
+    }
 }
 </style>
 	<head>
@@ -541,6 +554,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</body>
 
 </html>
+
 
 
 
