@@ -5,6 +5,29 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<style>
+    .pubSlider {
+        width: 100%;
+        height: 220px;            /* ارتفاع اسلایدر */
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .pubSlider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;        /* مثل نسخهٔ اصلی — تصویر را فیت و کراپ می‌کند */
+        display: block;
+    }
+
+    /* برای نمایش بهتر در موبایل */
+    @media (max-width: 768px) {
+        .pubSlider {
+            height: 180px;
+        }
+    }
+</style>
 	<head>
 		<title>Read Only by HTML5 UP</title>
 		<meta charset="utf-8" />
@@ -512,6 +535,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</body>
 
 </html>
+
 
 
 
