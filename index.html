@@ -6,6 +6,39 @@
 -->
 <html>
 	<style>
+		body {
+				overflow-x: hidden;
+			}
+			
+			#header {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 22em;
+				height: 100%;
+				overflow-y: auto;
+				z-index: 1000;
+			}
+			
+			#wrapper {
+				margin-left: 22em;
+				width: calc(100% - 22em);
+				float: none;
+				position: relative;
+			}
+			
+			@media screen and (max-width: 768px) {
+				#header {
+					position: relative;
+					width: 100%;
+					height: auto;
+				}
+				
+				#wrapper {
+					margin-left: 0;
+					width: 100%;
+				}
+			}
 .pubArticle {
     display: flex;
     flex-direction: row; 
@@ -144,28 +177,10 @@
         gap: 1em;
     }
 }
-		#header {
-    position: fixed;   /* or sticky/fixed if header already was fixed */
-    left: 0;
-    right: auto;
-    top: 0;
-    bottom: 0;
-    width: 22em;       /* or whatever the original width of sidebar was */
-}
-
-/* Main content area: float + width calc */
-#wrapper {
-    margin: 0;         /* remove margin-based shifting */
-    padding-left: 22em;/* push content right of sidebar */
-    width: auto;       /* let content size dynamically */
-    float: none;
-}
-		body > *:not(#header) {
-    margin-left: 22em;  /* or apply padding on the wrapper instead */
-}
+		
 </style>
 	<head>
-		<title>Read Only by HTML5 UP</title>
+		<title>alireza saber</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -310,12 +325,12 @@
         <h3>CV</h3>
         <p>If you are interested to full read my CV please download it from here.</p>
         
-        <!-- دکمه دانلود -->
+       
         <div class="download-btn" style="margin-bottom: 2em;">
             <a href="alireza-saber-CV.pdf" download class="button primary icon solid fa-download">Download Full CV</a>
         </div>
 
-        <!-- بخش EDUCATION -->
+        
         <div class="cv-section">
             <h4>EDUCATION</h4>
             <div class="cv-item">
@@ -336,7 +351,7 @@
             </div>
         </div>
 
-        <!-- بخش RESEARCH AND WORK EXPERIENCE -->
+       
         <div class="cv-section">
             <h4>RESEARCH AND WORK EXPERIENCE</h4>
             <div class="cv-item">
@@ -355,7 +370,7 @@
             </div>
         </div>
 
-        <!-- بخش ACADEMIC EXPERIENCES -->
+        
         <div class="cv-section">
             <h4>ACADEMIC EXPERIENCES</h4>
             <div class="cv-item">
@@ -381,7 +396,7 @@
             </div>
         </div>
 
-        <!-- بخش SKILLS -->
+        
         <div class="cv-section">
             <h4>SKILLS</h4>
             <div class="skills-grid">
@@ -443,6 +458,7 @@
 
 	</body>
 </html>
+
 
 
 
