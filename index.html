@@ -8,19 +8,19 @@
 	<style>
 .pubArticle {
     display: flex;
-    flex-direction: row; /* تغییر به ردیف برای چیدمان کنار هم */
+    flex-direction: row; 
     width: 100%;
     margin-bottom: 30px;
-    gap: 20px; /* فاصله بین اسلایدر و متن */
-    align-items: flex-start; /* تراز بالا */
+    gap: 20px; 
+    align-items: flex-start; 
 }
 
 .pubSlider {
-    width: 50%; /* عرض اسلایدر نصف عرض والد */
-    height: 250px; /* افزایش ارتفاع برای نمایش بهتر */
+    width: 50%; 
+    height: 250px; 
     border-radius: 6px;
     overflow: hidden;
-    flex-shrink: 0; /* جلوگیری از کوچک شدن */
+    flex-shrink: 0; 
 }
 
 .pubSlider img {
@@ -31,7 +31,7 @@
 }
 
 .pubArticle .inner {
-    width: 60%; /* عرض متن نصف عرض والد */
+    width: 60%; 
     box-sizing: border-box;
 }
 
@@ -40,7 +40,7 @@
     line-height: 1.5;
 }
 
-/* موبایل - بازگشت به حالت ستونی */
+
 @media (max-width: 768px) {
     .pubArticle {
         flex-direction: column;
@@ -94,7 +94,7 @@
     font-size: 1.1em;
 }
 
-/* استایل بخش مهارت‌ها */
+
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -122,13 +122,13 @@
     border-bottom: none;
 }
 
-/* استایل دکمه دانلود */
+
 .download-btn {
     text-align: center;
     margin: 2em 0;
 }
 
-/* رسپانسیو برای موبایل */
+
 @media screen and (max-width: 768px) {
     .cv-item {
         flex-direction: column;
@@ -143,6 +143,17 @@
         grid-template-columns: 1fr;
         gap: 1em;
     }
+}
+
+		#header {
+    left: 0;
+    right: auto;
+}
+
+
+#wrapper {
+    margin-left: 23em;
+    margin-right: 0;
 }
 </style>
 	<head>
@@ -424,6 +435,7 @@
 
 	</body>
 </html>
+
 
 
 
