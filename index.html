@@ -7,38 +7,43 @@
 <html>
 	<style>
 		body {
-				overflow-x: hidden;
-			}
-			
-			#header {
-				position: fixed;
-				left: 0;
-				top: 0;
-				width: 22em;
-				height: 100%;
-				overflow-y: auto;
-				z-index: 1000;
-			}
-			
-			#wrapper {
-				margin-left: 22em;
-				width: calc(100% - 22em);
-				float: none;
-				position: relative;
-			}
-			
-			@media screen and (max-width: 768px) {
-				#header {
-					position: relative;
-					width: 100%;
-					height: auto;
-				}
-				
-				#wrapper {
-					margin-left: 0;
-					width: 100%;
-				}
-			}
+    overflow-x: hidden;
+}
+
+#wrapper {
+    margin-left: 22em;
+    width: calc(100% - 22em);
+    max-width: none;
+}
+
+/* Ensure main content doesn't overflow */
+#main {
+    width: 100%;
+    max-width: none;
+}
+
+.container {
+    max-width: none;
+    width: 100%;
+}
+
+/* Fix for mobile */
+@media screen and (max-width: 768px) {
+    #header {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    #wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
 .pubArticle {
     display: flex;
     flex-direction: row; 
@@ -458,6 +463,7 @@
 
 	</body>
 </html>
+
 
 
 
