@@ -2886,6 +2886,7 @@ input, select, textarea {
 
 			#header {
 				width: 21em;
+				left: 0;
 			}
 
 				#header > header {
@@ -2899,7 +2900,7 @@ input, select, textarea {
 		/* Wrapper */
 
 			#wrapper {
-				padding-right: 21em;
+				padding-left: 21em;
 			}
 
 		/* Main */
@@ -2924,12 +2925,13 @@ input, select, textarea {
 
 			#header {
 				width: 20em;
+				left: 0;
 			}
 
 		/* Wrapper */
 
 			#wrapper {
-				padding-right: 20em;
+				padding-left: 20em;
 			}
 
 	}
@@ -2984,11 +2986,11 @@ input, select, textarea {
 				top: 0;
 				width: 23em;
 				z-index: 10002;
-				-moz-transform: translateX(23em);
+				-moz-transform: translateX(-23em);
 				-webkit-transform: translateX(23em);
 				-ms-transform: translateX(23em);
 				transform: translateX(23em);
-				right: 0;
+				left: 0;
 			}
 
 				#header > footer {
@@ -3093,7 +3095,7 @@ input, select, textarea {
 					}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
-				-moz-transform: translateX(-23em);
+				-moz-transform: translateX(23em);
 				-webkit-transform: translateX(-23em);
 				-ms-transform: translateX(-23em);
 				transform: translateX(-23em);
@@ -3180,11 +3182,11 @@ input, select, textarea {
 
 			#header {
 				width: 17em;
-				-moz-transform: translateX(17em);
+				-moz-transform: translateX(-17em);
 				-webkit-transform: translateX(17em);
 				-ms-transform: translateX(17em);
 				transform: translateX(17em);
-				right: 0;
+				left: 0;
 			}
 
 				#header > header {
@@ -3245,7 +3247,7 @@ input, select, textarea {
 				}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
-				-moz-transform: translateX(-17em);
+				-moz-transform: translateX(17em);
 				-webkit-transform: translateX(-17em);
 				-ms-transform: translateX(-17em);
 				transform: translateX(-17em);
