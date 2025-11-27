@@ -144,14 +144,15 @@
         gap: 1em;
     }
 }
-#header {
-    left: 0;
-    right: auto;
+@media screen and (min-width: 1281px) {
+    #wrapper {
+        padding-right: 0;
+    }
 }
-	#wrapper {
-    margin-left: 0; 
-    margin-right: -90em;   
-    width: auto;      
+
+#wrapper:before {
+    right: auto;
+    left: 0;
 }
 </style>
 	<head>
@@ -433,6 +434,7 @@
 
 	</body>
 </html>
+
 
 
 
