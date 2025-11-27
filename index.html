@@ -145,24 +145,20 @@
     }
 }
 		#header {
+    position: fixed;   /* or sticky/fixed if header already was fixed */
     left: 0;
     right: auto;
+    top: 0;
+    bottom: 0;
+    width: 22em;       /* or whatever the original width of sidebar was */
 }
 
+/* Main content area: float + width calc */
 #wrapper {
-    margin-left: 23em;
-    margin-right: 0;
-    width: auto;
-}
-@media screen and (min-width: 1281px) {
-    #wrapper {
-        padding-right: 0;
-    }
-}
-
-#wrapper:before {
-    right: auto;
-    left: 0;
+    margin: 0;         /* remove margin-based shifting */
+    padding-left: 22em;/* push content right of sidebar */
+    width: auto;       /* let content size dynamically */
+    float: none;
 }
 </style>
 	<head>
@@ -444,6 +440,7 @@
 
 	</body>
 </html>
+
 
 
 
