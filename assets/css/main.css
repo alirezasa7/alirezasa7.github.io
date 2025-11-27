@@ -2200,18 +2200,12 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 0 0 2.25em 0;
-			width: 100%;
-			height: auto;
-			max-height: 20em;
+			height: 20em;
 			border-radius: 0;
 		}
 
 			.image.main img {
 				border-radius: 0;
-				width: 100%;
-				height: auto;
-				object-fit: cover;
 			}
 
 /* List */
@@ -2714,8 +2708,8 @@ input, select, textarea {
     text-align: center;
     top: 0;
     width: 23em;
-    left: 0;
-    right: auto;
+    left: 0; /* Changed from right: 0 */
+    right: auto; /* Add this */
 }
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2826,8 +2820,8 @@ input, select, textarea {
 
 	#wrapper {
     background: #fff;
-    padding-left: 10em;
-    padding-right: 0;
+    padding-left: 23em; 
+    padding-right: 0; 
 }
 
 /* Main */
@@ -2906,7 +2900,7 @@ input, select, textarea {
 		/* Wrapper */
 
 			#wrapper {
-				padding-left: 10em;
+				padding-left: 21em;
 			}
 
 		/* Main */
@@ -2937,7 +2931,7 @@ input, select, textarea {
 		/* Wrapper */
 
 			#wrapper {
-				padding-left: 10em;
+				padding-left: 20em;
 			}
 
 	}
@@ -2993,9 +2987,9 @@ input, select, textarea {
 				width: 23em;
 				z-index: 10002;
 				-moz-transform: translateX(-23em);
-				-webkit-transform: translateX(-23em);
-				-ms-transform: translateX(-23em);
-				transform: translateX(-23em);
+				-webkit-transform: translateX(23em);
+				-ms-transform: translateX(23em);
+				transform: translateX(23em);
 				left: 0;
 			}
 
@@ -3102,9 +3096,9 @@ input, select, textarea {
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
 				-moz-transform: translateX(23em);
-				-webkit-transform: translateX(23em);
-				-ms-transform: translateX(23em);
-				transform: translateX(23em);
+				-webkit-transform: translateX(-23em);
+				-ms-transform: translateX(-23em);
+				transform: translateX(-23em);
 			}
 
 			body.header-visible #header {
@@ -3189,9 +3183,9 @@ input, select, textarea {
 			#header {
 				width: 17em;
 				-moz-transform: translateX(-17em);
-				-webkit-transform: translateX(-17em);
-				-ms-transform: translateX(-17em);
-				transform: translateX(-17em);
+				-webkit-transform: translateX(17em);
+				-ms-transform: translateX(17em);
+				transform: translateX(17em);
 				left: 0;
 			}
 
@@ -3254,9 +3248,9 @@ input, select, textarea {
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
 				-moz-transform: translateX(17em);
-				-webkit-transform: translateX(17em);
-				-ms-transform: translateX(17em);
-				transform: translateX(17em);
+				-webkit-transform: translateX(-17em);
+				-ms-transform: translateX(-17em);
+				transform: translateX(-17em);
 			}
 
 	}
