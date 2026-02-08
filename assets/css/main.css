@@ -3388,15 +3388,5 @@ input, select, textarea {
         height: 100vh;
     }
     
-    /* لینک‌های منو */
-    #header nav a[href^="#"] {
-        pointer-events: none; /* غیرفعال کردن anchor links */
-    }
     
-    /* فقط به لینک‌های واقعی اجازه کلیک بده */
-    #header nav a[href*="http"],
-    #header nav a[href*=".html"],
-    #header nav a[href*=".php"] {
-        pointer-events: auto;
-    }
 }
