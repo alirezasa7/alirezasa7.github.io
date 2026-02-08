@@ -3321,76 +3321,60 @@ input, select, textarea {
 
 @media screen and (max-width: 1024px) {
     
-    /* 1. منو را درست کنیم */
+    /* منو را در سمت چپ مخفی کن */
     #header {
-        width: 100% !important; /* کل عرض را بگیرد */
-        height: auto !important; /* ارتفاع اتوماتیک */
-        position: relative !important; /* نه fixed */
-        transform: none !important;
-        left: auto !important;
-        right: auto !important;
-        background: #4acaa8;
-        display: none; /* ابتدا مخفی */
-    }
-    
-    /* 2. وقتی منو باز است */
-    body.header-visible #header {
-        display: block;
         position: fixed;
-        top: 44px; /* زیر titleBar */
-        left: 0;
-        right: 0;
-        height: calc(100vh - 44px); /* کل ارتفاع منهای titleBar */
-        overflow-y: auto;
+        top: 0;
+        left: -100%; /* کاملاً خارج از صفحه چپ */
+        width: 80% !important; /* 80% عرض صفحه */
+        max-width: 300px;
+        height: 100vh;
+        transition: left 0.5s ease;
         z-index: 10000;
+        overflow-y: auto;
     }
     
-    /* 3. محتوا */
+    /* وقتی منو باز است */
+    body.header-visible #header {
+        left: 0;
+    }
+    
+    /* محتوای اصلی */
     #wrapper {
-        padding-left: 0 !important; /* padding را حذف کن */
-        padding-right: 0 !important;
-        margin-top: 44px; /* برای titleBar جا بگذار */
+        padding-left: 0 !important;
+        transition: margin-left 0.5s ease;
     }
     
-    /* 4. TitleBar */
-    #titleBar {
+    body.header-visible #wrapper {
+        margin-left: 80%; /* یا width منو */
+        max-width: 300px;
+    }
+    
+    /* overlay تاری برای پشت منو */
+    #header:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 80%;
+        background: rgba(0,0,0,0.5);
+        z-index: 9999;
+        display: none;
+    }
+    
+    body.header-visible #header:after {
         display: block;
+    }
+    
+    /* titleBar */
+    #titleBar {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         height: 44px;
         background: #222;
-        color: white;
         z-index: 10001;
-    }
-    
-    /* 5. محتوای منو */
-    #header > header {
-        padding: 2em;
-    }
-    
-    #header > nav ul li {
-        border-top: solid 2px #5ccfb1;
-    }
-    
-    #header > footer {
-        padding: 1em 2em;
-    }
-}
-
-/* برای موبایل کوچک (تا 736px) */
-@media screen and (max-width: 736px) {
-    #header {
-        width: 100% !important;
-    }
-    
-    #header > header {
-        padding: 1.5em;
-    }
-    
-    #header > header .avatar {
-        width: 6em;
-        margin: 0 auto 1em auto;
     }
 }
