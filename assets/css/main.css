@@ -3318,3 +3318,21 @@ input, select, textarea {
 			}
 
 	}
+@media screen and (max-width: 736px) {
+
+    /* Neutralize HTML5UP grid for publication */
+    .pubArticle {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .pubArticle.row {
+        margin-left: 0 !important;
+    }
+
+    .pubArticle.row > * {
+        padding-left: 0 !important;
+        width: 100% !important;
+    }
+
+}
