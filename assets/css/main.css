@@ -3318,21 +3318,23 @@ input, select, textarea {
 			}
 
 	}
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 768px) {
 
-    /* Neutralize HTML5UP grid for publication */
+    /* کاملاً publication رو از grid تم جدا می‌کنیم */
     .pubArticle {
-        margin-left: 0 !important;
-        width: 100%;
-    }
-
-    .pubArticle.row {
-        margin-left: 0 !important;
-    }
-
-    .pubArticle.row > * {
-        padding-left: 0 !important;
+        display: block !important;
         width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+    }
+
+    .pubArticle * {
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
 
 }
