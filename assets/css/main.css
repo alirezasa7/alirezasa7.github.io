@@ -2987,9 +2987,9 @@ input, select, textarea {
 				width: 23em;
 				z-index: 10002;
 				-moz-transform: translateX(-23em);
-				-webkit-transform: translateX(23em);
-				-ms-transform: translateX(23em);
-				transform: translateX(23em);
+				-webkit-transform: translateX(-23em);
+				-ms-transform: translateX(-23em);
+				transform: translateX(-23em);
 				left: 0;
 			}
 
@@ -3096,9 +3096,9 @@ input, select, textarea {
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
 				-moz-transform: translateX(23em);
-				-webkit-transform: translateX(-23em);
-				-ms-transform: translateX(-23em);
-				transform: translateX(-23em);
+				-webkit-transform: translateX(23em);
+				-ms-transform: translateX(23em);
+				transform: translateX(23em);
 			}
 
 			body.header-visible #header {
@@ -3318,17 +3318,4 @@ input, select, textarea {
 			}
 
 	}
-@media screen and (max-width: 768px) {
 
-    /* override رفتار features تم */
-    .features {
-        display: block;
-    }
-
-    .features > article.pubArticle {
-        width: 100% !important;
-        padding-left: 0 !important;
-        margin-left: 0 !important;
-    }
-
-}
