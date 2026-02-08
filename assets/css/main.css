@@ -3319,62 +3319,79 @@ input, select, textarea {
 
 	}
 
+
 @media screen and (max-width: 1024px) {
     
     
     #header {
-        position: fixed;
-        top: 0;
-        left: -100%; 
-        width: 80% !important;
-        max-width: 300px;
-        height: 100vh;
-        transition: left 0.5s ease;
-        z-index: 10000;
-        overflow-y: auto;
+        width: 100% !important; 
+        height: auto !important; 
+        position: relative !important; 
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        background: #4acaa8;
+        display: none; 
     }
     
     
     body.header-visible #header {
-        left: 0;
-    }
-    
-   
-    #wrapper {
-        padding-left: 0 !important;
-        transition: margin-left 0.5s ease;
-    }
-    
-    body.header-visible #wrapper {
-        margin-left: 80%; 
-        max-width: 300px;
-    }
-    
-    
-    #header:after {
-        content: '';
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 80%;
-        background: rgba(0,0,0,0.5);
-        z-index: 9999;
-        display: none;
-    }
-    
-    body.header-visible #header:after {
         display: block;
+        position: fixed;
+        top: 44px; 
+        left: 0;
+        right: 0;
+        height: calc(100vh - 44px); 
+        overflow-y: auto;
+        z-index: 10000;
     }
     
-    /* titleBar */
+    
+    #wrapper {
+        padding-left: 0 !important; 
+        padding-right: 0 !important;
+        margin-top: 44px;
+    }
+    
+    
     #titleBar {
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         height: 44px;
         background: #222;
+        color: white;
         z-index: 10001;
+    }
+    
+    
+    #header > header {
+        padding: 2em;
+    }
+    
+    #header > nav ul li {
+        border-top: solid 2px #5ccfb1;
+    }
+    
+    #header > footer {
+        padding: 1em 2em;
+    }
+}
+
+
+@media screen and (max-width: 736px) {
+    #header {
+        width: 100% !important;
+    }
+    
+    #header > header {
+        padding: 1.5em;
+    }
+    
+    #header > header .avatar {
+        width: 6em;
+        margin: 0 auto 1em auto;
     }
 }
