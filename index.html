@@ -4,35 +4,19 @@
 	<style>
 .pubArticle {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+    width: 120%;
     margin-bottom: 30px;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-/* فقط برای دسکتاپ 120% */
-@media (min-width: 769px) {
-    .pubArticle {
-        width: 120%;
-    }
-}
-
-/* برای موبایل 100% */
-@media (max-width: 768px) {
-    .pubArticle {
-        width: 100%;
-        flex-direction: column;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
+    gap: 20px; 
+    align-items: center; 
 }
 
 .pubSlider {
-    width: 300px;
-    height: 200px;
+    width: 50%; 
+    height: 250px; 
     border-radius: 6px;
     overflow: hidden;
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 .pubSlider img {
@@ -43,83 +27,144 @@
 }
 
 .pubArticle .inner {
-    flex: 1;
-    min-width: 0;
+    width: 70%; 
+    box-sizing: border-box;
+	min-width: 0;
 }
 
 .pubArticle .inner p {
     margin-top: 10px;
     line-height: 1.5;
-    text-align: justify;
+	text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
 }
 
-/* Media query برای موبایل */
+
 @media (max-width: 768px) {
+
+    .pubArticle {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
     .pubSlider {
         width: 100%;
-        height: 180px;
+        height: 200px;
     }
-    
+
     .pubArticle .inner {
         width: 100%;
     }
-    
-    /* اصلاحات بخش CV */
+
+}
+		.cv-section {
+    margin-bottom: 3em;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 2em;
+}
+
+.cv-section:last-child {
+    border-bottom: none;
+}
+
+.cv-section h4 {
+    color: #4acaa8;
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid #4acaa8;
+    padding-bottom: 0.5em;
+}
+
+.cv-item {
+    display: flex;
+    margin-bottom: 2em;
+    gap: 2em;
+}
+
+.cv-date {
+    flex: 0 0 200px;
+    font-weight: bold;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.cv-content {
+    flex: 1;
+}
+
+.cv-content strong {
+    color: #555;
+    font-size: 1.1em;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.skill-category h5 {
+    color: #777;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 0.5em;
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    padding: 0.3em 0;
+    border-bottom: 1px dashed #f4f4f4;
+}
+
+.skills-list li:last-child {
+    border-bottom: none;
+}
+
+
+.download-btn {
+    text-align: center;
+    margin: 2em 0;
+}
+
+
+@media screen and (max-width: 768px) {
     .cv-item {
         flex-direction: column;
-        gap: 5px;
-        margin-bottom: 1.5em;
+        gap: 0.5em;
     }
     
     .cv-date {
         flex: none;
-        width: 100%;
-        margin-bottom: 5px;
     }
     
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 1em;
     }
-    
-    /* اصلاح container برای موبایل */
-    #two .container {
-        padding-right: 15px !important;
-        overflow-x: hidden; /* جلوگیری از اسکرول افقی */
-    }
 }
-
-@media (max-width: 480px) {
-    .pubSlider {
-        height: 150px;
-    }
-    
-    .paper-btn {
-        display: inline-block;
-        margin: 5px 5px 5px 0;
-        padding: 6px 12px;
-        font-size: 14px;
-    }
+		.paper-btn {
+    display: inline-block;
+    margin-right: 12px;          
+    padding: 4px 8px;
+    background: #4acaa8;         
+    color: white;
+    border-radius: 8px;         
+    text-decoration: none;       
+    font-weight: 600;            
+    transition: 0.25s;
 }
-
-/* اگر هنوز مشکل اسکرول افقی دارید این را اضافه کنید */
-.container {
-    max-width: 100%;
-    overflow-x: hidden;
+.paper-btn:hover {
+    background: #3bb693;
+    transform: translateY(-2px); 
 }
-
-/* یا اگر می‌خواهید محتوا قابل اسکرول افقی باشد */
-#two .container {
+		#two .container {
     padding-right: 0;
-    margin-left: -10%; /* جبران 120% width */
-}
-
-@media (max-width: 768px) {
-    #two .container {
-        margin-left: 0;
-        padding-right: 15px;
-    }
 }
 		
 </style>
@@ -414,6 +459,7 @@
 
 	</body>
 </html>
+
 
 
 
