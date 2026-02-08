@@ -3322,12 +3322,12 @@ input, select, textarea {
 
 @media screen and (max-width: 1024px) {
     
-    /* منو را در سمت چپ مخفی کن */
+   
     #header {
         position: fixed;
         top: 0;
-        left: -100%; /* کاملاً خارج از صفحه چپ */
-        width: 80% !important; /* 80% عرض صفحه */
+        left: -100%; 
+        width: 80% !important; 
         max-width: 300px;
         height: 100vh;
         transition: left 0.5s ease;
@@ -3335,23 +3335,23 @@ input, select, textarea {
         overflow-y: auto;
     }
     
-    /* وقتی منو باز است */
+  
     body.header-visible #header {
         left: 0;
     }
     
-    /* محتوای اصلی */
+    
     #wrapper {
         padding-left: 0 !important;
         transition: margin-left 0.5s ease;
     }
     
     body.header-visible #wrapper {
-        margin-left: 80%; /* یا width منو */
+        margin-left: 80%; 
         max-width: 300px;
     }
     
-    /* overlay تاری برای پشت منو */
+    
     #header:after {
         content: '';
         position: fixed;
@@ -3368,7 +3368,7 @@ input, select, textarea {
         display: block;
     }
     
-    /* titleBar */
+    
     #titleBar {
         position: fixed;
         top: 0;
@@ -3377,5 +3377,26 @@ input, select, textarea {
         height: 44px;
         background: #222;
         z-index: 10001;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    /* وقتی منو باز است، اسکرول را غیرفعال کن */
+    body.header-visible {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+    /* لینک‌های منو */
+    #header nav a[href^="#"] {
+        pointer-events: none; /* غیرفعال کردن anchor links */
+    }
+    
+    /* فقط به لینک‌های واقعی اجازه کلیک بده */
+    #header nav a[href*="http"],
+    #header nav a[href*=".html"],
+    #header nav a[href*=".php"] {
+        pointer-events: auto;
     }
 }
