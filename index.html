@@ -5,7 +5,7 @@
 .pubArticle {
     display: flex;
     flex-direction: row; 
-    width: 110%;
+    width: 120%;
     margin-bottom: 30px;
     gap: 20px; 
     align-items: center; 
@@ -266,6 +266,29 @@
                 </div>
             </article>
 
+			<!-- Publication 2 -->
+            <article class="pubArticle">
+                <div class="pubSlider swiper">
+                    <div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="images/pneumenia.png" alt=""></div>
+                        <div class="swiper-slide"><img src="images/main-arch.png" alt=""></div>
+                        <div class="swiper-slide"><img src="images/cram.png" alt=""></div>
+                        <div class="swiper-slide"><img src="images/unet.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="inner">
+                    <h4>Efficient and Accurate Pneumonia Detection Using a Novel Multi-Scale Transformer Approach</h4>
+					<a class="paper-btn" href="https://www.mdpi.com/1424-8220/25/23/7233" target="_blank">Paper</a>
+                    <a class="paper-btn" href="https://github.com/amirrezafateh/Multi-Scale-Transformer-Pneumonia" target="_blank">Code</a>
+                    <p>We propose a novel multi-scale transformer framework for pneumonia detection that integrates precise lung segmentation and classification.
+						Using a lightweight transformer-enhanced TransUNet for lung segmentation and pre-trained ResNet backbones for feature extraction,
+						combined with Residual Attention and modified transformer modules,
+						our method achieves robust performance with high accuracy (93.75% on Kermany, 96.04% on Cohen) while remaining computationally efficient
+						for resource-constrained clinical environments. ...</p>
+                </div>
+            </article>
+
             <!-- Publication 1 -->
             <article class="pubArticle">
                 <div class="pubSlider swiper">
@@ -289,28 +312,7 @@
                 </div>
             </article>
 
-            <!-- Publication 2 -->
-            <article class="pubArticle">
-                <div class="pubSlider swiper">
-                    <div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="images/pneumenia.png" alt=""></div>
-                        <div class="swiper-slide"><img src="images/main-arch.png" alt=""></div>
-                        <div class="swiper-slide"><img src="images/cram.png" alt=""></div>
-                        <div class="swiper-slide"><img src="images/unet.png" alt=""></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="inner">
-                    <h4>Efficient and Accurate Pneumonia Detection Using a Novel Multi-Scale Transformer Approach</h4>
-					<a class="paper-btn" href="https://www.mdpi.com/1424-8220/25/23/7233" target="_blank">Paper</a>
-                    <a class="paper-btn" href="https://github.com/amirrezafateh/Multi-Scale-Transformer-Pneumonia" target="_blank">Code</a>
-                    <p>We propose a novel multi-scale transformer framework for pneumonia detection that integrates precise lung segmentation and classification.
-						Using a lightweight transformer-enhanced TransUNet for lung segmentation and pre-trained ResNet backbones for feature extraction,
-						combined with Residual Attention and modified transformer modules,
-						our method achieves robust performance with high accuracy (93.75% on Kermany, 96.04% on Cohen) while remaining computationally efficient
-						for resource-constrained clinical environments. ...</p>
-                </div>
-            </article>
+            
 
             
 
@@ -457,6 +459,7 @@
 
 	</body>
 </html>
+
 
 
 
