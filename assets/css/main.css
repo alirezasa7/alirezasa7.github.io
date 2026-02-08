@@ -3380,13 +3380,4 @@ input, select, textarea {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    
-    /* وقتی منو باز است، اسکرول را غیرفعال کن */
-    body.header-visible {
-        overflow: hidden;
-        height: 100vh;
-    }
-    
-    
-}
+
