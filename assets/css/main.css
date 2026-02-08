@@ -3321,12 +3321,12 @@ input, select, textarea {
 
 @media screen and (max-width: 1024px) {
     
-    /* منو را در سمت چپ مخفی کن */
+    
     #header {
         position: fixed;
         top: 0;
-        left: -100%; /* کاملاً خارج از صفحه چپ */
-        width: 80% !important; /* 80% عرض صفحه */
+        left: -100%; 
+        width: 80% !important;
         max-width: 300px;
         height: 100vh;
         transition: left 0.5s ease;
@@ -3334,23 +3334,23 @@ input, select, textarea {
         overflow-y: auto;
     }
     
-    /* وقتی منو باز است */
+    
     body.header-visible #header {
         left: 0;
     }
     
-    /* محتوای اصلی */
+   
     #wrapper {
         padding-left: 0 !important;
         transition: margin-left 0.5s ease;
     }
     
     body.header-visible #wrapper {
-        margin-left: 80%; /* یا width منو */
+        margin-left: 80%; 
         max-width: 300px;
     }
     
-    /* overlay تاری برای پشت منو */
+    
     #header:after {
         content: '';
         position: fixed;
