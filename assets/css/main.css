@@ -3320,60 +3320,55 @@ input, select, textarea {
 	}
 
 
-/* ===== MOBILE VERSION (1024px and below) ===== */
 @media screen and (max-width: 1024px) {
     
-    /* 1. HEADER/MENU FIXES */
+   
     #header {
         position: fixed;
         top: 0;
-        left: -100%;
-        width: 80% !important;
+        left: -100%; 
+        width: 80% !important; 
         max-width: 300px;
         height: 100vh;
-        transition: left 0.3s ease;
+        transition: left 0.5s ease;
         z-index: 10000;
         overflow-y: auto;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
     }
     
+  
     body.header-visible #header {
         left: 0;
     }
     
-    /* 2. CONTENT WRAPPER */
+    
     #wrapper {
         padding-left: 0 !important;
-        padding-top: 44px; /* Space for titleBar */
-        transition: transform 0.3s ease;
+        transition: margin-left 0.5s ease;
     }
     
     body.header-visible #wrapper {
-        transform: translateX(80%);
+        margin-left: 80%; 
+        max-width: 300px;
     }
     
-    /* 3. OVERLAY FOR MENU */
-    #header::after {
+    
+    #header:after {
         content: '';
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 80%;
-        max-width: 300px;
         background: rgba(0,0,0,0.5);
-        z-index: 9998;
+        z-index: 9999;
         display: none;
-        opacity: 0;
-        transition: opacity 0.3s ease;
     }
     
-    body.header-visible #header::after {
+   
+     body.header-visible #header:after {
         display: block;
-        opacity: 1;
     }
     
-    /* 4. TITLE BAR (MENU TOGGLE) */
     #titleBar {
         position: fixed;
         top: 0;
@@ -3381,319 +3376,7 @@ input, select, textarea {
         right: 0;
         height: 44px;
         background: #222;
-        color: #fff;
         z-index: 10001;
-        transition: transform 0.3s ease;
-        display: block !important;
-    }
-    
-    body.header-visible #titleBar {
-        transform: translateX(80%);
-    }
-    
-    #titleBar .title {
-        display: block;
-        font-weight: 700;
-        height: 44px;
-        line-height: 44px;
-        padding: 0 1em;
-        width: 100%;
-        text-align: left;
-    }
-    
-    #titleBar .toggle {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 64px;
-        height: 44px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 10002;
-        color: transparent; /* Hide text */
-    }
-    
-    #titleBar .toggle::before {
-        content: '\f0c9';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #4acaa8;
-        color: #ffffff;
-        font-size: 18px;
-        line-height: 44px;
-        text-align: center;
-    }
-    
-    body.header-visible #titleBar .toggle::before {
-        content: '\f00d'; /* X icon when menu is open */
-    }
-    
-    /* 5. PREVENT BODY SCROLL WHEN MENU IS OPEN */
-    body.header-visible {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-    }
-    
-    /* 6. FIX MENU LINKS FOR MOBILE */
-    #header > nav ul li a {
-        display: block;
-        padding: 15px 20px;
-        color: #ffffff !important;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        transition: background-color 0.3s ease;
-    }
-    
-    #header > nav ul li a:hover,
-    #header > nav ul li a:active {
-        background-color: rgba(255,255,255,0.1);
-        color: #ffffff !important;
-    }
-    
-    #header > nav ul li a.active {
-        background: #ffffff;
-        color: #4acaa8 !important;
-    }
-    
-    /* 7. FIX HEADER CONTENT SPACING */
-    #header > header {
-        padding: 2em;
-    }
-    
-    #header > header .avatar {
-        margin: 0 auto 1.5em auto;
-        width: 8em;
-    }
-    
-    #header > header h1 {
-        font-size: 1.5em;
-    }
-    
-    #header > footer {
-        padding: 1.5em;
-    }
-    
-    /* 8. PUBLICATION FIXES FOR MOBILE */
-    .pubArticle {
-        flex-direction: column !important;
-        width: 100% !important;
-        margin: 0 0 2em 0 !important;
-    }
-    
-    .pubSlider {
-        width: 100% !important;
-        height: 200px !important;
-        max-height: 200px !important;
-        margin-bottom: 1em;
-    }
-    
-    .pubArticle .inner {
-        width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    /* 9. CV SECTION FIXES FOR MOBILE */
-    .cv-item {
-        flex-direction: column !important;
-        gap: 0.5em !important;
-        margin-bottom: 1.5em !important;
-    }
-    
-    .cv-date {
-        flex: none !important;
-        width: 100% !important;
-        font-size: 0.9em;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1em !important;
-    }
-    
-    .cv-section {
-        margin-bottom: 2em !important;
-        padding-bottom: 1.5em !important;
-    }
-    
-    /* 10. BUTTON FIXES FOR MOBILE */
-    .paper-btn {
-        display: block !important;
-        margin: 8px 0 !important;
-        text-align: center !important;
-        width: 100% !important;
-    }
-    
-    .button {
-        width: 100% !important;
-        margin-bottom: 10px !important;
-    }
-    
-    /* 11. GENERAL LAYOUT FIXES */
-    .row {
-        display: block !important;
-        margin-left: 0 !important;
-    }
-    
-    .row > * {
-        width: 100% !important;
-        margin-left: 0 !important;
-        padding: 0 0 1.5em 0 !important;
-    }
-    
-    .row.gtr-uniform > * {
-        padding-top: 0 !important;
-    }
-    
-    /* 12. IMAGE FIXES */
-    .image.left,
-    .image.right {
-        float: none !important;
-        margin: 0 0 1em 0 !important;
-        width: 100% !important;
-    }
-    
-    .image.main {
-        height: 15em !important;
-    }
-    
-    /* 13. FEATURES SECTION FIX */
-    .features article {
-        display: block !important;
-        padding-top: 0 !important;
-        border-top: none !important;
-    }
-    
-    .features article .image {
-        display: block;
-        width: 100% !important;
-        padding-right: 0 !important;
-        margin-bottom: 1.5em;
-    }
-    
-    .features article .inner {
-        width: 100% !important;
-        display: block;
-    }
-    
-    /* 14. FORM FIXES */
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
-    select,
-    textarea {
-        width: 100% !important;
-        font-size: 16px; /* Prevent zoom on iOS */
-    }
-    
-    /* 15. UTILITY CLASSES FOR MOBILE */
-    .hide-on-mobile {
-        display: none !important;
-    }
-    
-    .show-on-mobile {
-        display: block !important;
-    }
-}
-
-/* ===== SMALL MOBILE (736px and below) ===== */
-@media screen and (max-width: 736px) {
-    #header {
-        width: 85% !important;
-        max-width: 280px;
-    }
-    
-    body.header-visible #wrapper,
-    body.header-visible #titleBar {
-        transform: translateX(85%);
-    }
-    
-    #header::after {
-        left: 85%;
-    }
-    
-    #header > header {
-        padding: 1.5em;
-    }
-    
-    #header > header .avatar {
-        width: 6em;
-    }
-    
-    #header > header h1 {
-        font-size: 1.3em;
-    }
-    
-    /* Reduce font sizes for very small screens */
-    body, input, select, textarea {
-        font-size: 14px;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-    
-    h3 {
-        font-size: 1.3em;
-    }
-    
-    .image.main {
-        height: 12em !important;
-    }
-}
-
-/* ===== EXTRA SMALL MOBILE (480px and below) ===== */
-@media screen and (max-width: 480px) {
-    #header {
-        width: 90% !important;
-        max-width: 250px;
-    }
-    
-    body.header-visible #wrapper,
-    body.header-visible #titleBar {
-        transform: translateX(90%);
-    }
-    
-    #header::after {
-        left: 90%;
-    }
-    
-    #header > header {
-        padding: 1em;
-    }
-    
-    #header > header .avatar {
-        width: 5em;
-        margin-bottom: 1em;
-    }
-    
-    .pubSlider {
-        height: 150px !important;
-    }
-    
-    .image.main {
-        height: 10em !important;
-    }
-    
-    /* Stack action buttons */
-    ul.actions:not(.fixed) {
-        flex-direction: column;
-        margin-left: 0;
-        width: 100% !important;
-    }
-    
-    ul.actions:not(.fixed) li {
-        width: 100%;
-        padding: 5px 0 0 0;
-    }
-    
-    ul.actions:not(.fixed) li:first-child {
-        padding-top: 0;
     }
 }
 
