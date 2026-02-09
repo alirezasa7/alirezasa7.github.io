@@ -335,8 +335,53 @@
     });
 </script>
 
+				<script>
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.querySelector('#titleBar .toggle');
+    const body = document.body;
+    const header = document.querySelector('#header');
+    
+    if (toggleBtn) {
+        // Toggle menu on button click
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            body.classList.toggle('header-visible');
+        });
+        
+        // Close menu when clicking on overlay (header::after)
+        if (header) {
+            header.addEventListener('click', function(e) {
+                if (e.target === header && body.classList.contains('header-visible')) {
+                    body.classList.remove('header-visible');
+                }
+            });
+        }
+        
+        // Close menu when clicking on menu links
+        const menuLinks = document.querySelectorAll('#header nav a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (body.classList.contains('header-visible')) {
+                    body.classList.remove('header-visible');
+                }
+            });
+        });
+        
+        // Close menu with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && body.classList.contains('header-visible')) {
+                body.classList.remove('header-visible');
+            }
+        });
+    }
+});
+</script>
+
 	</body>
 </html>
+
 
 
 
