@@ -3364,9 +3364,7 @@ input, select, textarea {
         display: none;
     }
     
-    body.header-visible #header:after {
-        display: block;
-    }
+   
     
     
     #titleBar {
