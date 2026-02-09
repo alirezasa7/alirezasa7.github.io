@@ -3346,10 +3346,7 @@ input, select, textarea {
         transition: margin-left 0.5s ease;
     }
     
-    body.header-visible #wrapper {
-        margin-left: 80%; 
-        max-width: 300px;
-    }
+   
     
     
     #header:after {
